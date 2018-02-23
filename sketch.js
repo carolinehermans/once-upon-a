@@ -1,5 +1,4 @@
-// A2Z F16
-// Daniel Shiffman
+// Thank you to Daniel Shiffman for writing the skeleton for this that I then cannibalized!
 // http://shiffman.net/a2z
 // https://github.com/shiffman/A2Z-F16
 var output = "Once upon a "
@@ -57,20 +56,4 @@ function personSaidWord() {
     output += wrd + ". "
   }
   document.getElementById("output").innerHTML = output
-}
-
-function generate() {
-  listening = false;
-  // Show the resulting output
-  var word = select('#newword').value()
-  var nxt = markov.nextWord(word);
-  if (nxt) {
-    output += word + " " + nxt + " ";
-    myVoice.speak(nxt)
-  }
-  else {
-    output += word + ". "
-  }
-  document.getElementById("output").innerHTML = output
-  listening = true;
 }
